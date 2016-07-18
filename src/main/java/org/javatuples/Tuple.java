@@ -106,7 +106,7 @@ public abstract class Tuple implements Iterable<Object>, Serializable, Comparabl
     
     @Override
     public final String toString() {
-        String str= "[";
+        String str= "(";
         int i = this.valueList.size();
         for(Object val: this.valueList) {
             str+=val.toString();
@@ -115,7 +115,7 @@ public abstract class Tuple implements Iterable<Object>, Serializable, Comparabl
             }
             i--;
         }
-        return str+"]";
+        return str+")";
     }
     
     
