@@ -34,7 +34,7 @@ import org.javatuples.valueintf.IValue0;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Unit<A> 
+public  class Unit<A>
         extends Tuple
         implements IValue0<A> {
 

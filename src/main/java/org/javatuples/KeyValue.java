@@ -36,7 +36,7 @@ import org.javatuples.valueintf.IValueValue;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class KeyValue<A,B> 
+public class KeyValue<A,B>
         extends Tuple
         implements IValueKey<A>, 
                    IValueValue<B> {

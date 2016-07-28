@@ -40,7 +40,7 @@ import org.javatuples.valueintf.IValue6;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Septet<A,B,C,D,E,F,G>
+public class Septet<A,B,C,D,E,F,G>
         extends Tuple
         implements IValue0<A>,
                    IValue1<B>,

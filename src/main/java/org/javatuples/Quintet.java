@@ -38,7 +38,7 @@ import org.javatuples.valueintf.IValue4;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Quintet<A,B,C,D,E>
+public class Quintet<A,B,C,D,E>
         extends Tuple
         implements IValue0<A>,
                    IValue1<B>,

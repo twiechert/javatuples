@@ -39,7 +39,7 @@ import org.javatuples.valueintf.IValue5;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Sextet<A,B,C,D,E,F>
+public class Sextet<A,B,C,D,E,F>
         extends Tuple
         implements IValue0<A>,
                    IValue1<B>,

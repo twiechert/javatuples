@@ -36,7 +36,7 @@ import org.javatuples.valueintf.IValueValue;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class LabelValue<A,B> 
+public class LabelValue<A,B>
         extends Tuple
         implements IValueLabel<A>,
                    IValueValue<B> {

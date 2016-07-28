@@ -43,7 +43,7 @@ import org.javatuples.valueintf.IValue9;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Decade<A,B,C,D,E,F,G,H,I,J>
+public class Decade<A,B,C,D,E,F,G,H,I,J>
         extends Tuple
         implements IValue0<A>,
                    IValue1<B>,

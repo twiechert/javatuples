@@ -41,7 +41,7 @@ import org.javatuples.valueintf.IValue7;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Octet<A,B,C,D,E,F,G,H>
+public class Octet<A,B,C,D,E,F,G,H>
         extends Tuple
         implements IValue0<A>,
                    IValue1<B>,

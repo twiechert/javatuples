@@ -36,7 +36,7 @@ import org.javatuples.valueintf.IValue2;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Triplet<A,B,C> 
+public  class Triplet<A,B,C>
         extends Tuple
         implements IValue0<A>,
                    IValue1<B>,

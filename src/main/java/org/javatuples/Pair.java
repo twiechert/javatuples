@@ -35,7 +35,7 @@ import org.javatuples.valueintf.IValue1;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Pair<A,B> 
+public class Pair<A,B>
         extends Tuple
         implements IValue0<A>,
                    IValue1<B> {

@@ -42,7 +42,7 @@ import org.javatuples.valueintf.IValue8;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Ennead<A,B,C,D,E,F,G,H,I>
+public class Ennead<A,B,C,D,E,F,G,H,I>
         extends Tuple
         implements IValue0<A>,
                    IValue1<B>,

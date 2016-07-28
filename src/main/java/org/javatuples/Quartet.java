@@ -37,7 +37,7 @@ import org.javatuples.valueintf.IValue3;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Quartet<A,B,C,D>
+public class Quartet<A,B,C,D>
         extends Tuple
         implements IValue0<A>,
                    IValue1<B>,
