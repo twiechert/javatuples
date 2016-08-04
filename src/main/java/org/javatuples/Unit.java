@@ -42,7 +42,7 @@ public  class Unit<A>
 
     private static final int SIZE = 1;
 
-    protected final A val0;
+    protected  A val0;
     
     
     public static <A> Unit<A> with(final A value0) {
