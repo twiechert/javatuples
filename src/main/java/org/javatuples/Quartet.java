@@ -48,13 +48,16 @@ public class Quartet<A,B,C,D>
 
     private static final int SIZE = 4;
 
-    protected final A val0;
-    protected final B val1;
-    protected final C val2;
-    protected final D val3;
+    protected  A val0;
+    protected  B val1;
+    protected  C val2;
+    protected  D val3;
     
     
-    
+    public Quartet(){
+
+    }
+
     public static <A,B,C,D> Quartet<A,B,C,D> with(final A value0, final B value1, final C value2, final D value3) {
         return new Quartet<A,B,C,D>(value0,value1,value2,value3);
     }
