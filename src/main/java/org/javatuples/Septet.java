@@ -54,13 +54,13 @@ public class Septet<A,B,C,D,E,F,G>
 
     private static final int SIZE = 7;
 
-    private final A val0;
-    private final B val1;
-    private final C val2;
-    private final D val3;
-    private final E val4;
-    private final F val5;
-    private final G val6;
+    protected final A val0;
+    protected final B val1;
+    protected final C val2;
+    protected final D val3;
+    protected final E val4;
+    protected final F val5;
+    protected final G val6;
     
     
     

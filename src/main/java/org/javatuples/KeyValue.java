@@ -45,8 +45,8 @@ public class KeyValue<A,B>
 
     private static final int SIZE = 2;
 
-    private final A key;
-    private final B value;
+    protected final A key;
+    protected final B value;
     
     
     

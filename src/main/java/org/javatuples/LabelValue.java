@@ -45,8 +45,8 @@ public class LabelValue<A,B>
 
     private static final int SIZE = 2;
 
-    private final A label;
-    private final B value;
+    protected final A label;
+    protected final B value;
     
     
     

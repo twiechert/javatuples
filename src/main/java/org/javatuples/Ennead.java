@@ -58,15 +58,15 @@ public class Ennead<A,B,C,D,E,F,G,H,I>
 
     private static final int SIZE = 9;
 
-    private final A val0;
-    private final B val1;
-    private final C val2;
-    private final D val3;
-    private final E val4;
-    private final F val5;
-    private final G val6;
-    private final H val7;
-    private final I val8;
+    protected final A val0;
+    protected final B val1;
+    protected final C val2;
+    protected final D val3;
+    protected final E val4;
+    protected final F val5;
+    protected final G val6;
+    protected final H val7;
+    protected final I val8;
     
     
     

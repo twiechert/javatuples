@@ -41,14 +41,14 @@ import java.util.List;
 public abstract class Tuple implements Iterable<Object>, Serializable, Comparable<Tuple> {
 
     private static final long serialVersionUID = 5431085632328343101L;
-    
-    private final Object[] valueArray;
-    private final List<Object> valueList;
-    
-    
+
+    protected final Object[] valueArray;
+    protected final List<Object> valueList;
+
+
 
     /**
-     * 
+     *
      * @deprecated Will be removed in 1.4. The "size" parameter is of no use at
      *             this level, so use the simpler Tuple(values) constructor instead.
      */
@@ -60,13 +60,13 @@ public abstract class Tuple implements Iterable<Object>, Serializable, Comparabl
     }
 
 
-    
+
     protected Tuple(final Object... values) {
         super();
         this.valueArray = values;
         this.valueList = Arrays.asList(values);
     }
-    
+
 
     /**
      * <p>
@@ -77,21 +77,21 @@ public abstract class Tuple implements Iterable<Object>, Serializable, Comparabl
      */
     public abstract int getSize();
 
-    
+
     /**
      * <p>
      * Get the value at a specific position in the tuple. This method
-     * has to return object, so using it you will lose the type-safety you 
+     * has to return object, so using it you will lose the type-safety you
      * get with the <tt>getValueX()</tt> methods.
      * </p>
-     * 
+     *
      * @param pos the position of the value to be retrieved.
      * @return the value
      */
     public final Object getValue(final int pos) {
         if (pos >= getSize()) {
             throw new IllegalArgumentException(
-                    "Cannot retrieve position " + pos + " in " + this.getClass().getSimpleName() + 
+                    "Cannot retrieve position " + pos + " in " + this.getClass().getSimpleName() +
                     ". Positions for this class start with 0 and end with " + (getSize() - 1));
         }
         return this.valueArray[pos];

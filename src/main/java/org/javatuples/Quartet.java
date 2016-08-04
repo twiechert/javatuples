@@ -48,10 +48,10 @@ public class Quartet<A,B,C,D>
 
     private static final int SIZE = 4;
 
-    private final A val0;
-    private final B val1;
-    private final C val2;
-    private final D val3;
+    protected final A val0;
+    protected final B val1;
+    protected final C val2;
+    protected final D val3;
     
     
     

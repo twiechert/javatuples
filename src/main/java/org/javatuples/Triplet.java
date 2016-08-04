@@ -46,9 +46,9 @@ public  class Triplet<A,B,C>
 
     private static final int SIZE = 3;
 
-    private final A val0;
-    private final B val1;
-    private final C val2;
+    protected final A val0;
+    protected final B val1;
+    protected final C val2;
     
     
     
