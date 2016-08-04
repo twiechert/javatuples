@@ -38,7 +38,7 @@ import java.util.List;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public abstract class Tuple implements Iterable<Object>, Serializable, Comparable<Tuple> {
+public abstract class Tuple implements Serializable, Comparable<Tuple> {
 
     private static final long serialVersionUID = 5431085632328343101L;
 
