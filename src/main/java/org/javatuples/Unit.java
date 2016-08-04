@@ -120,9 +120,11 @@ public  class Unit<A>
     public static <X> Unit<X> fromIterable(final Iterable<X> iterable, int index) {
         return fromIterable(iterable, index, false);
     }
-    
 
-    
+
+    public Unit() {
+        super();
+    }
 
 
     private static <X> Unit<X> fromIterable(final Iterable<X> iterable, int index, final boolean exactSize) {

@@ -56,16 +56,18 @@ public class Octet<A,B,C,D,E,F,G,H>
 
     private static final int SIZE = 8;
 
-    protected final A val0;
-    protected final B val1;
-    protected final C val2;
-    protected final D val3;
-    protected final E val4;
-    protected final F val5;
-    protected final G val6;
-    protected final H val7;
-    
-    
+    protected  A val0;
+    protected  B val1;
+    protected  C val2;
+    protected  D val3;
+    protected  E val4;
+    protected  F val5;
+    protected  G val6;
+    protected  H val7;
+
+    public Octet() {
+        super();
+    }
     
     public static <A,B,C,D,E,F,G,H> Octet<A,B,C,D,E,F,G,H> with(final A value0, final B value1, final C value2, final D value3, final E value4, final F value5, final G value6, final H value7) {
         return new Octet<A,B,C,D,E,F,G,H>(value0,value1,value2,value3,value4,value5,value6,value7);

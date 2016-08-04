@@ -60,18 +60,21 @@ public class Decade<A,B,C,D,E,F,G,H,I,J>
 
     private static final int SIZE = 10;
 
-    private final A val0;
-    private final B val1;
-    private final C val2;
-    private final D val3;
-    private final E val4;
-    private final F val5;
-    private final G val6;
-    private final H val7;
-    private final I val8;
-    private final J val9;
-    
-    
+    private  A val0;
+    private  B val1;
+    private  C val2;
+    private  D val3;
+    private  E val4;
+    private  F val5;
+    private  G val6;
+    private  H val7;
+    private  I val8;
+    private  J val9;
+
+    public Decade() {
+        super();
+    }
+
     public static <A,B,C,D,E,F,G,H,I,J> Decade<A,B,C,D,E,F,G,H,I,J> with(final A value0, final B value1, final C value2, final D value3, final E value4, final F value5, final G value6, final H value7, final I value8, final J value9) {
         return new Decade<A,B,C,D,E,F,G,H,I,J>(value0,value1,value2,value3,value4,value5,value6,value7,value8,value9);
     }

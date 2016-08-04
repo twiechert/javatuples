@@ -54,16 +54,19 @@ public class Septet<A,B,C,D,E,F,G>
 
     private static final int SIZE = 7;
 
-    protected final A val0;
-    protected final B val1;
-    protected final C val2;
-    protected final D val3;
-    protected final E val4;
-    protected final F val5;
-    protected final G val6;
-    
-    
-    
+    protected  A val0;
+    protected  B val1;
+    protected  C val2;
+    protected  D val3;
+    protected  E val4;
+    protected  F val5;
+    protected  G val6;
+
+
+    public Septet() {
+        super();
+    }
+
     public static <A,B,C,D,E,F,G> Septet<A,B,C,D,E,F,G> with(final A value0, final B value1, final C value2, final D value3, final E value4, final F value5, final G value6) {
         return new Septet<A,B,C,D,E,F,G>(value0,value1,value2,value3,value4,value5,value6);
     }

@@ -45,10 +45,12 @@ public class LabelValue<A,B>
 
     private static final int SIZE = 2;
 
-    protected final A label;
-    protected final B value;
-    
-    
+    protected  A label;
+    protected  B value;
+
+    public LabelValue() {
+        super();
+    }
     
     public static <A,B> LabelValue<A,B> with(final A label, final B value) {
         return new LabelValue<A,B>(label,value);

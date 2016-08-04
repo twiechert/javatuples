@@ -50,12 +50,15 @@ public class Quintet<A,B,C,D,E>
 
     private static final int SIZE = 5;
 
-    protected final A val0;
-    protected final B val1;
-    protected final C val2;
-    protected final D val3;
-    protected final E val4;
-    
+    protected  A val0;
+    protected  B val1;
+    protected  C val2;
+    protected  D val3;
+    protected  E val4;
+
+    public Quintet() {
+        super();
+    }
     
     
     public static <A,B,C,D,E> Quintet<A,B,C,D,E> with(final A value0, final B value1, final C value2, final D value3, final E value4) {

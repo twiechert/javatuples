@@ -45,11 +45,14 @@ public class KeyValue<A,B>
 
     private static final int SIZE = 2;
 
-    protected final A key;
-    protected final B value;
-    
-    
-    
+    protected  A key;
+    protected  B value;
+
+
+    public KeyValue() {
+        super();
+    }
+
     public static <A,B> KeyValue<A,B> with(final A key, final B value) {
         return new KeyValue<A,B>(key,value);
     }

@@ -46,12 +46,15 @@ public  class Triplet<A,B,C>
 
     private static final int SIZE = 3;
 
-    protected final A val0;
-    protected final B val1;
-    protected final C val2;
-    
-    
-    
+    protected  A val0;
+    protected  B val1;
+    protected  C val2;
+
+
+    public Triplet() {
+        super();
+    }
+
     public static <A,B,C> Triplet<A,B,C> with(final A value0, final B value1, final C value2) {
         return new Triplet<A,B,C>(value0,value1,value2);
     }

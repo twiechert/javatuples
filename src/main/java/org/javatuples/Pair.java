@@ -44,8 +44,8 @@ public class Pair<A,B>
 
     private static final int SIZE = 2;
 
-    protected final A val0;
-    protected final B val1;
+    protected  A val0;
+    protected  B val1;
     
     
     
@@ -181,6 +181,11 @@ public class Pair<A,B>
         this.val1 = value1;
     }
 
+
+
+    public Pair() {
+        super();
+    }
 
     public A getValue0() {
         return this.val0;

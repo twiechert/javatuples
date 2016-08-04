@@ -58,17 +58,19 @@ public class Ennead<A,B,C,D,E,F,G,H,I>
 
     private static final int SIZE = 9;
 
-    protected final A val0;
-    protected final B val1;
-    protected final C val2;
-    protected final D val3;
-    protected final E val4;
-    protected final F val5;
-    protected final G val6;
-    protected final H val7;
-    protected final I val8;
-    
-    
+    protected  A val0;
+    protected  B val1;
+    protected  C val2;
+    protected  D val3;
+    protected  E val4;
+    protected  F val5;
+    protected  G val6;
+    protected  H val7;
+    protected  I val8;
+
+    public Ennead() {
+        super();
+    }
     
     public static <A,B,C,D,E,F,G,H,I> Ennead<A,B,C,D,E,F,G,H,I> with(final A value0, final B value1, final C value2, final D value3, final E value4, final F value5, final G value6, final H value7, final I value8) {
         return new Ennead<A,B,C,D,E,F,G,H,I>(value0,value1,value2,value3,value4,value5,value6,value7,value8);
