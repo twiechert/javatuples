@@ -51,7 +51,11 @@ public class LabelValue<A,B>
     public LabelValue() {
         super();
     }
-    
+
+    public Object[] objectValues() {
+        return new Object[]{label, value};
+    }
+
     public static <A,B> LabelValue<A,B> with(final A label, final B value) {
         return new LabelValue<A,B>(label,value);
     }

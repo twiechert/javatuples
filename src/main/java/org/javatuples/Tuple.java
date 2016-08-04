@@ -19,6 +19,8 @@
  */
 package org.javatuples;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,29 +44,20 @@ public abstract class Tuple implements Serializable, Comparable<Tuple> {
 
     private static final long serialVersionUID = 5431085632328343101L;
 
-    protected final Object[] valueArray;
-    protected final List<Object> valueList;
 
 
 
-    /**
-     *
-     * @deprecated Will be removed in 1.4. The "size" parameter is of no use at
-     *             this level, so use the simpler Tuple(values) constructor instead.
-     */
-    @Deprecated
-    protected Tuple(@SuppressWarnings("unused") final int size, final Object... values) {
-        super();
-        this.valueArray = values;
-        this.valueList = Arrays.asList(values);
-    }
+
+
+
+
+    public abstract Object[] objectValues();
+
 
 
 
     protected Tuple(final Object... values) {
         super();
-        this.valueArray = values;
-        this.valueList = Arrays.asList(values);
     }
 
 
@@ -94,21 +87,18 @@ public abstract class Tuple implements Serializable, Comparable<Tuple> {
                     "Cannot retrieve position " + pos + " in " + this.getClass().getSimpleName() +
                     ". Positions for this class start with 0 and end with " + (getSize() - 1));
         }
-        return this.valueArray[pos];
+        return this.objectValues()[pos];
     }
     
 
     
-    public final Iterator<Object> iterator() {
-        return this.valueList.iterator();
-    }
-    
+
     
     @Override
     public  String toString() {
         String str= "(";
-        int i = this.valueList.size();
-        for(Object val: this.valueList) {
+        int i = this.objectValues().length;
+        for(Object val: this.objectValues()) {
             str+=val.toString();
             if(i!= 1) {
                 str+=", ";
@@ -120,7 +110,7 @@ public abstract class Tuple implements Serializable, Comparable<Tuple> {
     
     
     public final boolean contains(final Object value) {
-        for (final Object val : this.valueList) {
+        for (final Object val : this.objectValues()) {
             if (val == null) {
                 if (value == null) {
                     return true;
@@ -159,52 +149,17 @@ public abstract class Tuple implements Serializable, Comparable<Tuple> {
 
     
     
-    public final int indexOf(final Object value) {
-        int i = 0;
-        for (final Object val : this.valueList) {
-            if (val == null) {
-                if (value == null) {
-                    return i;
-                }
-            } else {
-                if (val.equals(value)) {
-                    return i;
-                }
-            }
-            i++;
-        }
-        return -1;
-    }
+
     
+
     
-    public final int lastIndexOf(final Object value) {
-        for (int i = getSize() - 1; i >= 0; i--) {
-            final Object val = this.valueList.get(i);
-            if (val == null) {
-                if (value == null) {
-                    return i;
-                }
-            } else {
-                if (val.equals(value)) {
-                    return i;
-                }
-            }
-        }
-        return -1;
-    }
     
 
     
     
     
-    public final List<Object> toList() {
-        return Collections.unmodifiableList(new ArrayList<Object>(this.valueList));
-    }
-    
-    
-    
     public final Object[] toArray() {
-        return this.valueArray.clone();
+        return this.objectValues().clone();
     }
     
     
@@ -214,7 +169,7 @@ public abstract class Tuple implements Serializable, Comparable<Tuple> {
         final int prime = 31;
         int result = 1;
         result = prime * result
-                + ((this.valueList == null) ? 0 : this.valueList.hashCode());
+                + ((this.objectValues() == null) ? 0 : Arrays.hashCode(this.objectValues()));
         return result;
     }
 
@@ -232,7 +187,7 @@ public abstract class Tuple implements Serializable, Comparable<Tuple> {
             return false;
         }
         final Tuple other = (Tuple) obj;
-        return this.valueList.equals(other.valueList);
+        return Arrays.equals(this.objectValues(), other.objectValues());
     }
 
 
@@ -241,13 +196,13 @@ public abstract class Tuple implements Serializable, Comparable<Tuple> {
     @SuppressWarnings({ "rawtypes", "unchecked" })
     public int compareTo(final Tuple o) {
         
-        final int tLen = this.valueArray.length;
-        final Object[] oValues = o.valueArray;
+        final int tLen = this.objectValues().length;
+        final Object[] oValues = o.objectValues();
         final int oLen = oValues.length;
         
         for (int i = 0; i < tLen && i < oLen; i++) {
             
-            final Comparable tElement = (Comparable)this.valueArray[i];
+            final Comparable tElement = (Comparable)this.objectValues()[i];
             final Comparable oElement = (Comparable)oValues[i];
             
             final int comparison = tElement.compareTo(oElement);

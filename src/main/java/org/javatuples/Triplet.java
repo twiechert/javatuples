@@ -51,6 +51,10 @@ public  class Triplet<A,B,C>
     protected  C val2;
 
 
+    public Object[] objectValues() {
+        return new Object[]{val0, val1, val2};
+    }
+
     public Triplet() {
         super();
     }

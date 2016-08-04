@@ -52,8 +52,12 @@ public class Quartet<A,B,C,D>
     protected  B val1;
     protected  C val2;
     protected  D val3;
-    
-    
+
+
+    public Object[] objectValues() {
+        return new Object[]{val0, val1, val2, val3};
+    }
+
     public Quartet(){
 
     }

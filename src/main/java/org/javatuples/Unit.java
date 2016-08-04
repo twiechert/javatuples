@@ -43,8 +43,12 @@ public  class Unit<A>
     private static final int SIZE = 1;
 
     protected  A val0;
-    
-    
+
+
+    public Object[] objectValues() {
+        return new Object[]{val0};
+    }
+
     public static <A> Unit<A> with(final A value0) {
         return new Unit<A>(value0);
     }

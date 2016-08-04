@@ -68,6 +68,10 @@ public class Ennead<A,B,C,D,E,F,G,H,I>
     protected  H val7;
     protected  I val8;
 
+    public Object[] objectValues() {
+        return new Object[]{val0, val1, val2, val3, val4, val5, val6, val7, val8};
+    }
+
     public Ennead() {
         super();
     }

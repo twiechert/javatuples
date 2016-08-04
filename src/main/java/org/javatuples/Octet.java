@@ -56,6 +56,11 @@ public class Octet<A,B,C,D,E,F,G,H>
 
     private static final int SIZE = 8;
 
+
+    public Object[] objectValues() {
+        return new Object[]{val0, val1, val2, val3, val4, val5, val6, val7};
+    }
+
     protected  A val0;
     protected  B val1;
     protected  C val2;

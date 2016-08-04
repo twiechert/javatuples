@@ -71,6 +71,10 @@ public class Decade<A,B,C,D,E,F,G,H,I,J>
     private  I val8;
     private  J val9;
 
+    public Object[] objectValues() {
+        return new Object[]{val0, val1, val2, val3, val4, val5, val6, val7, val8, val9};
+    }
+
     public Decade() {
         super();
     }

@@ -63,6 +63,11 @@ public class Septet<A,B,C,D,E,F,G>
     protected  G val6;
 
 
+    public Object[] objectValues() {
+        return new Object[]{val0, val1, val2, val3, val4, val5, val6};
+    }
+
+
     public Septet() {
         super();
     }

@@ -48,6 +48,9 @@ public class KeyValue<A,B>
     protected  A key;
     protected  B value;
 
+    public Object[] objectValues() {
+        return new Object[]{key, value};
+    }
 
     public KeyValue() {
         super();

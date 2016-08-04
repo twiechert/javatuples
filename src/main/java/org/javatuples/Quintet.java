@@ -59,8 +59,13 @@ public class Quintet<A,B,C,D,E>
     public Quintet() {
         super();
     }
-    
-    
+
+
+    public Object[] objectValues() {
+        return new Object[]{val0, val1, val2, val3, val4};
+    }
+
+
     public static <A,B,C,D,E> Quintet<A,B,C,D,E> with(final A value0, final B value1, final C value2, final D value3, final E value4) {
         return new Quintet<A,B,C,D,E>(value0,value1,value2,value3,value4);
     }

@@ -59,6 +59,9 @@ public class Sextet<A,B,C,D,E,F>
     protected  E val4;
     protected  F val5;
 
+    public Object[] objectValues() {
+        return new Object[]{val0, val1, val2, val3, val4, val5};
+    }
 
     public Sextet() {
         super();

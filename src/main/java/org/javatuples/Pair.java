@@ -46,8 +46,11 @@ public class Pair<A,B>
 
     protected  A val0;
     protected  B val1;
-    
-    
+
+
+    public Object[] objectValues() {
+        return new Object[]{val0, val1};
+    }
     
     public static <A,B> Pair<A,B> with(final A value0, final B value1) {
         return new Pair<A,B>(value0,value1);
