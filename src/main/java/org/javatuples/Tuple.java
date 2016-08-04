@@ -68,6 +68,7 @@ public abstract class Tuple implements Serializable, Comparable<Tuple> {
      * 
      * @return the size of the tuple.
      */
+    @JsonIgnore
     public abstract int getSize();
 
 
@@ -81,6 +82,7 @@ public abstract class Tuple implements Serializable, Comparable<Tuple> {
      * @param pos the position of the value to be retrieved.
      * @return the value
      */
+    @JsonIgnore
     public final Object getValue(final int pos) {
         if (pos >= getSize()) {
             throw new IllegalArgumentException(
